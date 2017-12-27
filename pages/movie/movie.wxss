@@ -1,0 +1,24 @@
+/* pages/movie/movie.wxss */
+.poster{
+  display:flex;
+  border-bottom:2rpx solid #eee;/*设置下边框1px*/
+}
+.title{
+    display:block;
+   
+
+}
+.info{
+    display:block;
+}
+.summary{
+    border-bottom:2rpx solid #eee;/*设置下边框1px*/
+}
+.lable{
+    font-size:32rpx;
+     color:#c0c0c0;
+}
+.content{
+    font-size:26rpx;
+    color:#999;
+}

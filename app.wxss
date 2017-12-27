@@ -1,0 +1,65 @@
+page{
+  font-family: "Microsoft Yahei";
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;/*设置纵向排列*/
+}
+/*设置父容器样式*/
+.page-header{
+  display:flex;
+  justify-content: center;/*设置为弹性盒模型文字横向居中对齐*/
+  border-bottom:2rpx solid #ccc;/*设置下边框1px*/
+  margin-bottom: 10rpx;/*设置底边边距5px,注意px盒rpx的换算1px=2rpx*/
+}
+/*设置父容器文本样式*/
+.page-header-text{
+  padding: 20rpx 40rpx;/*上下20rpx,左右为40rpx*/
+  color: #999;/*文字颜色*/
+  font-size:40rpx; 
+}
+/*设置除了上面的框框外下面的整个样式*/
+.page-body{
+  display:flex;
+  flex:1;/*设置为1是指将剩余的空间占满*/
+  flex-direction: column;/*设置纵向排列*/
+}
+/*设置每一个电影整个框的样式*/
+.item{
+  display:flex;
+  padding: 20rpx 40rpx;/*上下20rpx,左右为40rpx*/
+  border-bottom:2rpx solid #eee;/*设置下边框1px*/
+}
+/*设置index页面的左边图片样式*/
+.item .poster{
+  width:128rpx;
+  height:128rpx;
+  margin-right: 20rpx;
+}
+/*设置index页面item的右边框样式*/
+.item .meta{
+  flex:1;
+ }
+ /*设置index页面将他们设置成块装元素可以使他们换行显示*/
+ .item .title,.item .sub_title{
+   display:block;
+   margin-bottom: 14rpx;
+ }
+ .item .title{
+   font-size:32rpx;
+ }
+ .item .sub_title{
+   font-size:22rpx;
+   color:#c0c0c0;
+ }
+ .item .artists{
+   font-size:26rpx;
+   color:#999;
+ }
+ .item .rating{
+   font-size:28rpx;
+   font-weight:bold;/*设置是否加粗*/
+   color: red;
+ }
+
+
+

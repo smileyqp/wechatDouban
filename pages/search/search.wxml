@@ -1,0 +1,24 @@
+<!--pages/search/search.wxml-->
+<view class="page-header">
+<input class="page-header-text"placeholder="输入搜索关键字"auto-focusbindchange="search"/>
+</view>
+<!--可滚动视图区域scroll-view,并且可点就是navigator,scroll-y是指可以纵向滑动 -->
+<scroll-view class="page-body" scroll-y="true">
+    <!--获得movies中的对象循环遍历输出-->
+    <navigator url="../movie/movie?id={{item.id}}"wx:for="{{movies}}">
+        <view class="item">
+            <!--for循环的默认的item，并且从取得的结果中来看的话item.images.small是缩略图-->
+            <image class="poster"src="{{item.images.small}}"></image>
+            <view class="meta">
+                <text class="title">{{item.title}}</text>
+                <text class="sub_title">{{item.original_title}}({{item.year}})</text>
+                <text class="artists">
+                    <text wx:for="{{item.directors}}">{{item.name}}</text><!--有可能有多个导演，所以要遍历一下-->
+                </text>
+            </view > 
+            <view class="rating">
+            <text>{{item.rating.average}}</text><!--评分-->
+            </view>
+        </view>
+    </navigator>
+</scroll-view>
